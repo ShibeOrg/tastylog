@@ -45,3 +45,4 @@ jobs:
       - name: Terraform init
         run: |
           terraform init -no-color
+          
