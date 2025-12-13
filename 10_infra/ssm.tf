@@ -5,6 +5,9 @@ resource "aws_ssm_parameter" "host" {
   name  = "/${var.project}/${var.environment}/app/MYSQL_HOST"
   type  = "String"
   value = aws_db_instance.mysql_standalone.address
+  allowed_pattern = ""
+  description     = ""
+  key_id          = ""
 }
 
 resource "aws_ssm_parameter" "port" {
@@ -12,6 +15,9 @@ resource "aws_ssm_parameter" "port" {
   type  = "String"
   value = aws_db_instance.mysql_standalone.port
   # value = "3306"
+  allowed_pattern = ""
+  description     = ""
+  key_id          = ""
 }
 
 resource "aws_ssm_parameter" "database" {
@@ -19,6 +25,9 @@ resource "aws_ssm_parameter" "database" {
   type  = "String"
   value = aws_db_instance.mysql_standalone.name
   # value = "tastylog"
+  allowed_pattern = ""
+  description     = ""
+  key_id          = ""
 }
 
 resource "aws_ssm_parameter" "username" {
